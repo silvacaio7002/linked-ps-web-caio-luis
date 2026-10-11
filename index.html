@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicólogos</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <header id="HeaderMain">
-        <nav>
+    <header id="headerMain">
+        <a href="#home" class="logo">
+            Nome / Logo
+        </a>
+
+        <nav class="navMenu">
             <a href="#home">Início</a>
             <a href="#services">Serviços</a>
             <a href="#time">Horários</a>
@@ -17,70 +23,136 @@
     </header>
     <main>
         <section id="home"  class="Container">
-            <h1>Lorem Ipsum.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, aliquid doloribus deleniti nulla facilis cupiditate ducimus quam sunt consectetur veritatis fugiat repellat ipsum voluptatem natus? Dolore eius unde non vitae?</p>
-            <a href="#time" class="primaryBtn">
-                AGENDAR
-            </a>
-            <a href="#services" class="primaryBtn">
-                SAIBA MAIS
-            </a>
+            <div class="letterSide">
+                <p>Consultório de psicologia e psicoterapia</p>
+                <div class="sepPrymary">
+                    <h1>Lorem Ipsum.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, aliquid doloribus deleniti nulla facilis cupiditate ducimus quam sunt consectetur veritatis fugiat repellat ipsum voluptatem natus? Dolore eius unde non vitae?</p>
+                    <div class="Homebtns">
+                    <a href="#time" class="primaryBtn">
+                        <span class="btnIcon" aria-hidden="true"></span>
+                        <span>AGENDAR</span>
+                    </a>
+                    <a href="#services" class="secondaryBtn">
+                        <span class="btnIconsec" aria-hidden="true"></span>
+                        <span>SAIBA MAIS</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="imgHome">
+                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1200&q=80" alt="Psicoterapia">
+                
+                <svg class="curva-s-overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+
+                    <path
+                        d="M 0,0
+                        L 80,0
+                        C 58,18 43,32 53,48
+                        C 65,65 59,83 32,100
+                        L 0,100 Z"
+                        fill="#C9E1E7"
+                        opacity="0.25">
+                    </path>
+
+                    <path
+                        d="M 0,0
+                        L 72,0
+                        C 52,18 37,32 47,49
+                        C 59,65 54,83 26,100
+                        L 0,100 Z"
+                        fill="#A9D0D7"
+                        opacity="0.15">
+                    </path>
+                    <path
+                        d="M 0,0
+                        L 65,0
+                        C 45,18 30,33 41,49
+                        C 52,65 48,83 20,100
+                        L 0,100 Z"
+                        fill="#FFFFFF">
+                    </path>
+
+                </svg>
+            </div>
+   
         </section>
 
         <section id="services"  class="Container">
-            <h1>Nossos Serviços.</h1>
-            <h2>Qualidades que trazem toda diferença para o paciente.</h2>
-            <hr>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus aperiam quasi possimus aliquam aliquid! Eos autem praesentium, eligendi quam soluta officia qui, pariatur repellat dolor placeat doloremque fuga molestias nihil?
-            </p>
-
+            <div class="textServ">
+                <h1>Nossos Serviços.</h1>
+                <h2>Qualidades que trazem toda diferença para o paciente.</h2>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus aperiam quasi possimus aliquam aliquid! Eos autem praesentium, eligendi quam soluta officia qui, pariatur repellat dolor placeat doloremque fuga molestias nihil? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas magnam est veniam quia consectetur adipisci sequi animi, magni dolor accusamus repellat excepturi consequuntur placeat praesentium repellendus dignissimos nemo laudantium tempore.
+                </p>
+            </div>
         </section>
 
-        <section id="time"  class="Container">
-            <h1>Horário de Atendimento.</h1>
-            <h2>Estamos disponíveis para agendamentos de consultas e visitas.</h2>
-            <hr>
+        <section id="time"  class="Container flores-bg">
+            <div class="headerTime">
+                <h1>Horário de Atendimento.</h1>
+                <h2>Estamos disponíveis para agendamentos de consultas e visitas.</h2>
+                <hr>
+            </div>
             <div class="cardTime">
+
+                <i class="fa-regular fa-clock iconTime"></i>
+
                 <table class="tableTime">
                     <tbody>
                         <tr>
                             <td>Segunda - Sexta</td>
-                            <td>08:00 - 17:00</td>
+                            <th>08:00 - 17:00</th>
                         </tr>
                         <tr>
                             <td>Sábado</td>
-                            <td>10:00 - 14:00</td>
+                            <th>10:00 - 14:00</th>
                         </tr>
                         <tr>
                             <td>Domingo</td>
-                            <td>Fechado</td>
+                            <th>Fechado</th>
                         </tr>
                     </tbody>
                 </table>
 
             </div>
-
         </section>
 
         <section id="fdbks"  class="Container">
-            <h1>Feedbacks.</h1>
-            <h2>Quem conhece, confia.</h2>
-            <hr>
-            <ul>
-                <li>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis nisi fugit mollitia veniam officiis officia doloribus vel incidunt consequuntur repudiandae id at."
+            <div class="letterSide">
+                <h1>Feedbacks.</h1>
+                <h2>Quem conhece, confia.</h2>
+                <hr>
+                <ul>
+                    <li>
+                        <p>
+                            "Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua."
+                        </p>
+                        <p class="cliente">- Cliente 1, 2026</p>
+                    </li>
 
-                 - Cliente 1,2026   
-                </li>
-                <li>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis nisi fugit mollitia veniam officiis officia doloribus vel incidunt consequuntur repudiandae id at."
+                    <li>
+                        <p>
+                            "Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua."
+                        </p>
+                        <p class="cliente">- Cliente 2, 2026</p>
+                    </li>
 
-                 - Cliente 2,2026   
-                </li>
-                <li>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis nisi fugit mollitia veniam officiis officia doloribus vel incidunt consequuntur repudiandae id at."
-
-                 - Cliente 3,2025   
-                </li>
-            </ul>
-
+                    <li>
+                        <p>
+                            "Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua."
+                        </p>
+                        <p class="cliente">- Cliente 3, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <img src="assets/img-fdbks.jpg" alt="Feedbacks" class="imgFdbks">
         </section>
 
         <section id="contact"  class="Container">
@@ -156,8 +228,6 @@
             </div>
         </footer>
     </main>
-    
-
-   
 </body>
+<script src="scrypt.js"></script>
 </html> 

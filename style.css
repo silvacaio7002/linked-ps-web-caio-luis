@@ -1,0 +1,423 @@
+/* Comandos Gerais */ 
+/* Evita que os elementos "extrapolem" */
+* {
+    box-sizing: border-box;
+}
+/* Definindo variáveis ao invés de chamar as cores todo momento */ 
+:root {
+    --verde-petroleo: #00494B;
+    --azul-gelo: #C9E1E7;
+    --branco: #FFFFFF;
+}
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+/* Deixa a scrollagem mais suave */
+html{
+    scroll-behavior: smooth;
+}
+/* Evita engasgos das seções*/
+section {
+    scroll-margin-top: 20px;
+}
+/* Definindo os "fundos" de cada parte*/
+#services, #fdbks{
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+
+}
+#home, #time, #contact{
+    background-color: var(--branco);
+    color: black;
+
+}
+/* Começando pelo método Mobile - First */
+/* Cabeçalho do Site */
+#headerMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--branco);
+    border-bottom: var(--verde-petroleo) 1px solid;
+    width: 100%;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+.navMenu{
+    justify-content: center;
+    gap: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.navMenu a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+.navMenu a:hover {
+    color: #007477;
+    transform: scale(1.05);
+}
+.navMenu a:focus-visible {
+    outline: 2px solid var(--verde-petroleo);
+    outline-offset: 5px;
+}
+.Container{
+    height: 750px;
+}
+
+/* Sessão de Início */
+#home{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.sepPrymary {
+    margin: auto 0;
+    max-width: 420px;
+}   
+.letterSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+    z-index: 2;
+}
+.imgHome {
+    position: relative;
+    flex: 1.5;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imgHome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
+    display: block;
+}
+
+.curva-s-overlay {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 160px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    display: block;
+}
+.fotoHome {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right; /* Mantém o foco das pessoas visível */
+    display: block;
+}
+
+.curvaTransicao {
+    position: absolute;
+    top: 0;
+    left: -1px; /* Evita fresta de 1px entre o fundo e a curva */
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.Homebtns{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.primaryBtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background-color: var(--verde-petroleo);
+    padding: 10px 18px;
+    border-radius: 15px;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.primaryBtn:hover{
+    background-color: #007477;
+    transform: scale(1.05);
+}
+.btnIcon{
+    width: 25px;
+    height:25px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.secondaryBtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background-color: var(--branco);
+    padding: 10px 18px;
+    border: var(--verde-petroleo) 1px solid;
+    border-radius: 15px;
+    color: var(--verde-petroleo);
+    text-decoration: none;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.secondaryBtn:hover{
+    background-color: #d0f6fffe;
+    transform: scale(1.05);
+}
+.btnIconsec{
+    width: 25px;
+    height:25px;
+    border: 3px solid var(--verde-petroleo);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+/* Sessão de Serviços */
+#services{
+    text-align: center;
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+.textServ{
+    width: 100%;
+    max-width: 720px;
+}
+.textServ h1, .headerTime h1{
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0 0 8px;
+}
+.textServ h2, .headerTime h2{
+    font-size: 21px;
+    font-weight: normal;
+    margin: 0;
+}
+.textServ hr{
+    width: 158px;
+    border: none;
+    border-top: 1px solid var(--branco);
+    margin: 32px auto 40px;
+}
+.textServ p{
+    font-size: 25px;
+    line-height: 1.25;
+    margin: 0;
+}
+.flores-bg {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.flor-decorativa {
+    position: absolute;
+    z-index: -1;
+
+    width: var(--tamanho);
+    aspect-ratio: 1;
+    
+    left: var(--x);
+    top: var(--y);
+
+    transform: translate(-50%, -50%) rotate(var(--rotacao));
+
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.flor-decorativa svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.flores-bg > :not(.flor-decorativa) {
+    position: relative;
+    z-index: 1;
+}
+#time{
+    text-align: center;
+    color: var(--verde-petroleo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+.headerTime hr{
+    width: 158px;
+    border: none;
+    border-top: 1px solid var(--verde-petroleo);
+    margin: 32px auto 40px;
+}
+.cardTime{
+    border: black 1px solid;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.60);
+    border-radius: 12px;
+    width: 50%;
+    min-height: 300px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    /* Vai posicionar a tabela à direita*/
+    justify-content: flex-end;
+    gap: 30px;
+}
+.tableTime{
+    width: 100%;
+    max-width: 500px;
+    
+
+    background-color: #00494B;
+    color: #FFFFFF;
+
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+
+    padding: 10px 18px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+.tableTime td,
+.tableTime th {
+    padding: 18px 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+.tableTime td{
+    width: 60%;
+    text-align: left;
+}
+/* Os horários coloquei como TH, pois facilita na hora de colocar em negrito o mesmo*/
+.tableTime th {
+    width: 40%;
+    text-align: right;
+    font-weight: bold;
+}
+/*Aqui vai ajudar a criar linhas divisórias */
+.tableTime tr:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.iconTime {
+    font-size: 150px;
+    color: #003D32;
+    flex-shrink: 0;
+}
+/* Seção de Feedbacks */
+#fdbks {
+    display: grid;
+    grid-template-columns: minmax(0, 450px) 400px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+
+    padding: 60px 8% 60px 6.5%;
+    height: 750px;
+
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+}
+
+#fdbks .letterSide {
+    width: 100%;
+    max-width: 450px;
+    min-width: 0;
+    padding: 0;
+}
+
+#fdbks .letterSide h1 {
+    font-size: 54px;
+    font-weight: normal;
+    margin: 0 0 2px;
+}
+
+#fdbks .letterSide h2 {
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+}
+
+#fdbks .letterSide hr {
+    width: 140px;
+    border: none;
+    border-top: 1px solid var(--branco);
+    margin: 12px 0 38px;
+}
+
+#fdbks ul {
+    margin: 0;
+    padding-left: 19px;
+}
+
+/* Depoimentos */
+#fdbks li {
+    font-size: 18px;
+    line-height: 1.25;
+    padding-left: 0;
+    margin-bottom: 26px;
+}
+/* A última terá essa propriedade */
+#fdbks li:last-child {
+    margin-bottom: 0;
+}
+
+/* Parágrafos dos depoimentos */
+#fdbks li p {
+    margin: 0;
+}
+
+/* Identificação dos clientes */
+#fdbks li .cliente {
+    margin-top: 20px;
+}
+
+#fdbks .imgFdbks {
+    width: 100%;
+    max-width: 400px;
+    height: 494px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+    border-radius: 12px;
+    justify-self: end;
+}
+/* Sessão de Contato */
+
+/* Responsividade para Desktop */
+@media (min-width: 1024px) {
+    #headerMain{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    .navMenu{
+        gap: 32px;
+    }
+    
+    
+}
