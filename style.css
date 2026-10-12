@@ -9,17 +9,26 @@
     --azul-gelo: #C9E1E7;
     --branco: #FFFFFF;
 }
+
+/* Deixa a scrollagem mais suave */
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 body{
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin: 0;
 }
-/* Deixa a scrollagem mais suave */
-html{
-    scroll-behavior: smooth;
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
-/* Evita engasgos das seções*/
-section {
-    scroll-margin-top: 20px;
+.Container{
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 48px 20px;
 }
 /* Definindo os "fundos" de cada parte*/
 #services, #fdbks{
@@ -35,30 +44,36 @@ section {
 /* Começando pelo método Mobile - First */
 /* Cabeçalho do Site */
 #headerMain{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
+
     padding: 20px;
     background-color: var(--branco);
     border-bottom: var(--verde-petroleo) 1px solid;
     width: 100%;
+    
 }
 .logo{
     text-decoration: none;
     color: black;
-    font-size: 24px;
+    font-size: 22px;
 }
 .navMenu{
     justify-content: center;
-    gap: 15px;
+    gap: 10px 16px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .navMenu a{
     color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     transition: color 0.25s ease, transform 0.25s ease;
 }
 .navMenu a:hover {
@@ -69,32 +84,34 @@ section {
     outline: 2px solid var(--verde-petroleo);
     outline-offset: 5px;
 }
-.Container{
-    height: 750px;
-}
-
 /* Sessão de Início */
 #home{
     display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
+    padding: 0;
 }
-.sepPrymary {
-    margin: auto 0;
-    max-width: 420px;
-}   
 .letterSide {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 4rem;
+    padding: 40px 24px;
     z-index: 2;
+    min-width: 0;
 }
+.sepPrymary {
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+}   
+
 .imgHome {
     position: relative;
-    flex: 1.5;
-    height: 100%;
+    width: 100%;
+    height: 300px;
+    flex: none;
     overflow: hidden;
 }
 
@@ -103,18 +120,16 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: 70% center;
-    display: block;
 }
 
 .curva-s-overlay {
     position: absolute;
     top: 0;
-    left: -1px;
-    width: 160px;
+    left: 0;
+    width: 70px;
     height: 100%;
     pointer-events: none;
     z-index: 2;
-    display: block;
 }
 .fotoHome {
     width: 100%;
@@ -134,60 +149,54 @@ section {
 }
 .Homebtns{
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+
 }
-.primaryBtn{
-    display: inline-flex;
+.primaryBtn, .secondaryBtn{
+     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    background-color: var(--verde-petroleo);
-    padding: 10px 18px;
-    border-radius: 15px;
-    color: var(--branco);
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     text-decoration: none;
-    font-size: large;
-    font-family:Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+.primaryBtn{
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+}
+.secondaryBtn{
+    border: var(--verde-petroleo) 1px solid;
+    color: var(--verde-petroleo);
+}
+.btnIcon, .btnIconsec{
+    width: 22px;
+    height: 22px;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 .primaryBtn:hover{
     background-color: #007477;
     transform: scale(1.05);
 }
 .btnIcon{
-    width: 25px;
-    height:25px;
-    border: 3px solid #FFF;
-    border-radius: 50%;
-    flex-shrink: 0;
+    border: 3px solid var(--branco);
 }
-.secondaryBtn{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    background-color: var(--branco);
-    padding: 10px 18px;
-    border: var(--verde-petroleo) 1px solid;
-    border-radius: 15px;
-    color: var(--verde-petroleo);
-    text-decoration: none;
-    font-size: large;
-    font-family:Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.btnIconsec{
+    border: 3px solid var(--verde-petroleo);
 }
 .secondaryBtn:hover{
     background-color: #d0f6fffe;
     transform: scale(1.05);
 }
-.btnIconsec{
-    width: 25px;
-    height:25px;
-    border: 3px solid var(--verde-petroleo);
-    border-radius: 50%;
-    flex-shrink: 0;
-}
+
 /* Sessão de Serviços */
 #services{
     text-align: center;
@@ -195,32 +204,32 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
-    box-sizing: border-box;
 }
 .textServ{
     width: 100%;
     max-width: 720px;
 }
 .textServ h1, .headerTime h1{
-    font-size: 60px;
+    font-size:clamp(30px, 7vw, 40px);
     font-weight: normal;
-    margin: 0 0 8px;
+    line-height: 1.15;
+    margin: 0 0 12px;
 }
 .textServ h2, .headerTime h2{
-    font-size: 21px;
+    font-size: 18px;
     font-weight: normal;
+    line-height: 1.15;
     margin: 0;
 }
-.textServ hr{
-    width: 158px;
-    border: none;
+.textServ hr, .headerTime hr{
+    width: 120px;
+    border: 0;
     border-top: 1px solid var(--branco);
-    margin: 32px auto 40px;
+    margin: 24px auto;
 }
 .textServ p{
-    font-size: 25px;
-    line-height: 1.25;
+    font-size: 17px;
+    line-height: 1.7;
     margin: 0;
 }
 .flores-bg {
@@ -255,57 +264,50 @@ section {
     position: relative;
     z-index: 1;
 }
+/* Seção de Horário */
 #time{
     text-align: center;
     color: var(--verde-petroleo);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 60px 20px;
-    box-sizing: border-box;
 }
-.headerTime hr{
-    width: 158px;
-    border: none;
-    border-top: 1px solid var(--verde-petroleo);
-    margin: 32px auto 40px;
+.headerTime{
+    width: 100%;
+    max-width: 720px;
 }
+
 .cardTime{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 560px;
+    padding: 20px;
     border: black 1px solid;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.60);
     border-radius: 12px;
-    width: 50%;
-    min-height: 300px;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    /* Vai posicionar a tabela à direita*/
-    justify-content: flex-end;
-    gap: 30px;
+}
+.iconTime {
+    font-size: 72px;
+    color: #003D32;
 }
 .tableTime{
     width: 100%;
-    max-width: 500px;
-    
-
-    background-color: #00494B;
-    color: #FFFFFF;
-
     border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-
-    padding: 10px 18px;
-
-    font-family: Georgia, serif;
-    font-size: 16px;
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+    font-size: 14px;
+    border-radius: 12px;
 }
+
 .tableTime td,
 .tableTime th {
-    padding: 18px 14px;
+    padding: 14px 8px;
     text-align: left;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
 }
 .tableTime td{
     width: 60%;
@@ -313,7 +315,6 @@ section {
 }
 /* Os horários coloquei como TH, pois facilita na hora de colocar em negrito o mesmo*/
 .tableTime th {
-    width: 40%;
     text-align: right;
     font-weight: bold;
 }
@@ -321,21 +322,15 @@ section {
 .tableTime tr:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
-.iconTime {
-    font-size: 150px;
-    color: #003D32;
-    flex-shrink: 0;
-}
+
 /* Seção de Feedbacks */
 #fdbks {
     display: grid;
-    grid-template-columns: minmax(0, 450px) 400px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0;
+    grid-template-columns: minmax(0, 1fr) ;
+    gap: 28px;
 
-    padding: 60px 8% 60px 6.5%;
-    height: 750px;
+    padding: 48px 24px;
+    height: auto;
 
     background-color: var(--verde-petroleo);
     color: var(--branco);
@@ -343,70 +338,248 @@ section {
 
 #fdbks .letterSide {
     width: 100%;
-    max-width: 450px;
+    max-width: none;
     min-width: 0;
     padding: 0;
 }
 
 #fdbks .letterSide h1 {
-    font-size: 54px;
+    font-size: clamp(32px, 7vw, 42px);
     font-weight: normal;
-    margin: 0 0 2px;
+    margin: 0 0 8px;
 }
 
 #fdbks .letterSide h2 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: normal;
     margin: 0;
 }
 
 #fdbks .letterSide hr {
-    width: 140px;
-    border: none;
+    width: 120px;
+    border: 0;
     border-top: 1px solid var(--branco);
-    margin: 12px 0 38px;
+    margin: 20px 0 28px;
 }
 
 #fdbks ul {
     margin: 0;
-    padding-left: 19px;
+    padding-left: 20px;
 }
 
 /* Depoimentos */
 #fdbks li {
-    font-size: 18px;
-    line-height: 1.25;
+    font-size: 16px;
+    line-height: 1.6;
     padding-left: 0;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
 }
 /* A última terá essa propriedade */
 #fdbks li:last-child {
     margin-bottom: 0;
 }
 
-/* Parágrafos dos depoimentos */
 #fdbks li p {
     margin: 0;
 }
 
-/* Identificação dos clientes */
+
 #fdbks li .cliente {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 #fdbks .imgFdbks {
     width: 100%;
     max-width: 400px;
-    height: 494px;
-
+    height: auto;
+    aspect-ratio: 4/3;
     object-fit: cover;
-    object-position: center;
-
-    display: block;
     border-radius: 12px;
-    justify-self: end;
+    justify-self: center;
 }
-/* Sessão de Contato */
+/* Seção de Contato */
+#contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 28px;
+}
+.supContact{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+.cardAddress{
+    width: 100%;
+    min-height: auto;
+    padding: 24px;
+    flex-shrink: 1;
+
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+    border-radius: 12px;    
+}
+.cardAddress h2{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0 0 24px;
+}
+.addressTitle{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.adressTitle .material-symbols-outlined{
+    font-size: 24px;    
+}
+.addressTitle h3{
+    font-size: 17px;
+    margin: 0;
+}
+.addressInfo{
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+.mapsClinic{
+    width: 100%;
+    height: 280px;
+    min-width: 0;
+    flex-shrink: 1;
+
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+
+}
+.mapsClinic iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* Formulário do Contato */ 
+.formContact{
+    width: 100%;
+    max-width: 900px;
+    padding: 22px 18px;
+    border: 1px var(--verde-petroleo) solid;
+    border-radius: 12px;
+
+}
+.formHdr{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+.formHdr h2{
+    color: var(--verde-petroleo);
+    font-size: 21px;
+    font-weight: normal;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.formHdr p{
+    color:  rgb(167, 167, 167);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+.boxForm{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.boxForm input{
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+    border: none;
+    border-radius: 9px;
+    font: inherit;
+    font-size: 14px;
+}
+.boxForm input::placeholder{
+    color: var(--branco);
+    opacity: 1;
+}
+.boxForm input:focus-visible{
+    outline:2px solid var(--verde-petroleo);
+    outline-offset: 3px;
+}
+.formContact button{
+    cursor: pointer;
+    font: inherit;
+}
+.labelHidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+/* Rodapé do Site */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 24px;
+    gap: 28px;
+
+    background-color: var(--verde-petroleo);
+    color: var(--branco);
+}
+/*Vai evitar que o rodape no mobile fica com uma coluna enorme */
+footer .footerContent {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+}
+.footAcs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.footAcs h1{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 16px;
+}
+.footAcs ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footAcs li{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footAcs a{
+    color: var(--branco);
+    text-decoration: none;
+}
+.footAcs a:hover{
+    text-decoration: underline;
+}
+.footAcs a:focus-visible{
+    outline: 2px solid var(--branco);
+    outline-offset: 3px;
+}
 
 /* Responsividade para Desktop */
 @media (min-width: 1024px) {
@@ -415,9 +588,161 @@ section {
         justify-content: space-between;
         padding: 20px 40px;
     }
+    .logo{
+        font-size: 24px;
+    }
     .navMenu{
         gap: 32px;
+        flex-wrap: nowrap;
+    }
+    .navMenu a{
+        font-size: 16px;
+    }
+    /* Seção de Início*/
+    #home{
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 650px;
+    }
+    .letterSide{
+        flex: 1;
+        padding: 48px 4rem;
+    }
+    .imgHome{
+        flex: 1.5;
+        width: auto;
+        height: auto;
+        min-height: 650px;
+    }
+    .curva-s-overlay{
+        width: 160px;
+    }
+    .Homebtns{
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    .primaryBtn, .secondaryBtn{
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    /*Seção de Serviços */
+    #services{
+        min-height: 700px;
+    }
+    .textServ h1, .headerTimeh1{
+        font-size: 48px;
+    }
+    .textServ h2, .headerTime h2{
+        font-size: 21px;
+    }
+    .textServ p{
+        font-size: 21px;
+    }
+
+    /*Seção de Horários*/
+    #time{
+        min-height: 700px;
+    }
+    .cardTime{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        width: min(100%, 760px);
+        padding: 28px;
+    }
+    .iconTime{
+        font-size: 110px;
+    }
+    .tableTime{
+        flex: 1;
+        max-width: 500px;
+        font-size: 16px;
+    }
+    .tableTime td, .tableTime th{
+        padding: 18px 14px;
+    }
+
+    /*Feedbacks */
+    #fdbks{
+         grid-template-columns: 
+         minmax(0, 450px)
+         minmax(0, 400px);
+         justify-content: space-between;
+         align-items: center;
+         padding: 60px 6.5%;
+    }
+    #fdbks .letterSide h1{
+        font-size: 48px;
+    }
+    #fdbks .letterSide h2{
+        font-size: 17px;
+    }
+    #fdbks .imgFdbks{
+        width: 100%;
+        height: 450ox;
+        aspect-ratio: auto;
+        justify-self: end;
+    }
+
+    /*Seção do Contato */
+    #contact{
+        gap: 32px;
+    }
+    .supContact{
+        flex-direction: row;
+        align-items: stretch;
+        gap: 32px;
+        width: 90%;
+    }
+    .cardAddress{
+        width: 35%;
+        min-height: 320px;
+        flex-shrink: 1;
+    }
+    .mapsClinic{
+        flex: 1;
+        width: auto;
+        height: 320px;
     }
     
-    
+    /*Seção do Formulário */
+    .formContact{
+        padding: 28px;
+    }
+    .formHdr{
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+    .formHdr h2{
+        white-space: nowrap;
+        padding-right: 16px;
+        border-right: 1px solid var(--verde-petroleo);
+    }
+
+    /* Rodapé da Página */
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 40px 5%;
+        gap: 32px;
+    }
+
+    footer .footerContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        width: 100%;
+    }
+    .footAcs{
+        width: auto;
+    }
+} /* Esse media extra serve  para evitar as animações excessivas para quem prefere movimento reduzido */
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
 }

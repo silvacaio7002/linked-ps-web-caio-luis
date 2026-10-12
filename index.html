@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicólogos</title>
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header id="headerMain">
@@ -155,79 +157,116 @@
             <img src="assets/img-fdbks.jpg" alt="Feedbacks" class="imgFdbks">
         </section>
 
-        <section id="contact"  class="Container">
-            <div class="cardAddress">
-                <h2>Visite-nos</h2>
-                <p>ENDEREÇO:</p>
-                <p>Rua, número</p>
-                <p>Bairro</p>
-                <p>CEP: 40028922</p>
+        <section id="contact"  class="Container flores-bg">
+            <div class="supContact">
+                <div class="cardAddress">
+                    <h2>Visite-nos</h2>
+                    <div class="addressInfo">
+                        <div class="addressTitle">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+
+                            <h3>ENDEREÇO:</h3>
+                        </div>
+
+                        <p>
+                            Rua, número<br>
+                            Bairro
+                        </p>
+
+                        <p>CEP: 40028922</p>
+                    </div>
+                </div>
+                <div class="mapsClinic">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d782.3419948810772!2d-44.258242914219736!3d-21.13381888231997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c88f88471c3b%3A0xcafab320ac0ef641!2sMuseu%20Ferrovi%C3%A1rio%20de%20S%C3%A3o%20Jo%C3%A3o%20del-Rei!5e0!3m2!1spt-BR!2sbr!4v1791801402111!5m2!1spt-BR!2sbr"
+                        title="Localização da clínica"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+
+                </div>
             </div>
-            <div class="mapsClinic">
-
-
-            </div>
-            <form action="#">
-                <h2>Formulário de Contato |</h2><p>Ficou com alguma dúvida? Converse diretamente conosco!</p>
-
+            <form action="#" class="formContact">
+                <div class="formHdr">
+                    <h2>Formulário de Contato </h2><p>Ficou com alguma dúvida? Converse diretamente conosco!</p>
+                </div>
                 <div class="boxForm">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name">
+                    <label for="name" class="labelHidden">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Nome:" required>
                 </div>
 
                 <div class="boxForm">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <label for="email" class="labelHidden">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email:" required>
                 </div>
 
                 <div class="boxForm">
-                    <label for="observ">Obs:</label>
-                    <input type="text" id="observ" name="observ">
+                    <label for="observ" class="labelHidden">Obs:</label>
+                    <input type="text" id="observ" name="observ" placeholder="Obs:">
                 </div>
-                <button type="submit">ENVIAR</button>
+                <button type="submit" class="secondaryBtn">
+                    <span class="btnIconsec" aria-hidden="true"></span>
+                    <span>ENVIAR</span>
+                </button>
             </form>
         </section>
         <footer>
-            <div class="footAcs">
-                <h1>EMPRESA:</h1>
-                <ul>
-                    <li><a href="facebook.com">Facebook</a></li>
-                     <li><a href="instagram.com">Instagram</a></li>
-                      <li><a href="linkedin.com">LinkedIn</a></li>
-                </ul>
-            </div>
+            <div class="footerContent">
+                <div class="footAcs">
+                    <h1>EMPRESA:</h1>
+                    <ul>
+                        <li><a href="facebook.com">
+                            <i class="fa-brands fa-facebook-f"></i> 
+                            Facebook</a>
+                        </li>
 
-            <div class="footAcs">
-                <h1>ACESSO RÁPIDO:</h1>
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#services">Nossos Serviços</a></li>
-                    <li><a href="#time">Horários</a></li>
-                    <li><a href="#fdbks">Feedbacks</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </div>
+                        <li><a href="instagram.com">
+                            <i class="fa-brands fa-instagram"></i>
+                            Instagram</a>
+                        </li>
 
-            <div class="footAcs">
-                <h1>EMPRESA:</h1>
-                <ul>
-                    <li>Serviço 1</li>
-                    <li>Serviço 2</li>
-                    <li>Serviço 3</li>
-                </ul>
-            </div>
+                        <li><a href="linkedin.com"> 
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="footAcs">
-                <h1>CONTATO:</h1>
-                <ul>
-                    <li>Rua, número</li>
-                    <li>Bairro</li>
-                    <li>+55 (01)23456-7890</li>
-                    <li>email@email.com</li>
-                </ul>
+                <div class="footAcs">
+                    <h1>ACESSO RÁPIDO:</h1>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Nossos Serviços</a></li>
+                        <li><a href="#time">Horários</a></li>
+                        <li><a href="#fdbks">Feedbacks</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footAcs">
+                    <h1>SERVIÇOS:</h1>
+                    <ul>
+                        <li>Serviço 1</li>
+                        <li>Serviço 2</li>
+                        <li>Serviço 3</li>
+                    </ul>
+                </div>
+
+                <div class="footAcs">
+                    <h1>CONTATO:</h1>
+                    <ul>
+                        <li>Rua, número</li>
+                        <li>Bairro</li>
+                        <li>+55 (01)23456-7890</li>
+                        <li>email@email.com</li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </main>
-</body>
 <script src="scrypt.js"></script>
+</body>
 </html> 
