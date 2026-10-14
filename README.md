@@ -1,6 +1,6 @@
 # linked-ps-web-caio-luis
 
-Linked - Desafio Técnico Web
+Linked - Desafio Técnico Web  
 Desenvolvedor: Caio Luís Santos Silva
 
 ## Sobre o Projeto
