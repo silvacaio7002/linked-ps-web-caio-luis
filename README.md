@@ -14,9 +14,9 @@ A página foi desenvolvida com base no layout disponibilizado pela empresa atrav
 - JavaScript(Vanilla) - Elementos decorativos e interações implementadas no projeto
 
 ## Como Executar
-1- Clone este repositório ou baixe os arquivos.
-2- Abra a pasta do projeto no Visual Studio Code ou em outro editor.
-3- Abra o arquivo index.html diretamente pelo navegador.
+1- Clone este repositório ou baixe os arquivos.  
+2- Abra a pasta do projeto no Visual Studio Code ou em outro editor.  
+3- Abra o arquivo index.html diretamente pelo navegador.  
 
 Obs: Não é necessário instalar dependências como npm para executar a versão do HTML, CSS, JavaScript.
 
@@ -25,4 +25,4 @@ Obs: Não é necessário instalar dependências como npm para executar a versão
 - Organização de estilos para adaptar a página a diferentes tamanhos de tela.
 - Uso de elementos decorativos com JavaScript, quando aplicável.
 
-### Autor: Caio Luís Santos Silva
+#### Autor: Caio Luís Santos Silva
